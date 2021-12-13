@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
-// import { Provider } from 'react-redux';
-// import { configureStore } from './redux/store';
+import { Provider } from 'react-redux';
+import { configureStore } from './redux/store';
 import reportWebVitals from './reportWebVitals';
 
 const App = React.lazy(() => import(/* webpackChunkName: "App" */ './App'));
@@ -10,9 +10,11 @@ const App = React.lazy(() => import(/* webpackChunkName: "App" */ './App'));
 
 const Main = () => {
   return (
-    <Suspense fallback={<div className="loading" />}>
-      <App />
-    </Suspense>
+    <Provider store={configureStore()}>
+      <Suspense fallback={<div className="loading" />}>
+        <App />
+      </Suspense>
+    </Provider>
   );
 };
 
