@@ -34,7 +34,7 @@ const Login = () => {
             name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="nome@email.com"
+            placeholder="name@email.com"
           />
         </div>
         <div className="input-group">
