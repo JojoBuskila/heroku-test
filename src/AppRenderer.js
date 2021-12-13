@@ -6,8 +6,6 @@ import reportWebVitals from './reportWebVitals';
 
 const App = React.lazy(() => import(/* webpackChunkName: "App" */ './App'));
 
-// import App from './App';
-
 const Main = () => {
   return (
     <Provider store={configureStore()}>
