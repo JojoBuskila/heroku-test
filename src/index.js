@@ -15,6 +15,7 @@ import { getCurrentColor, setCurrentColor } from './helpers/Utils';
 const color =
   isMultiColorActive || isDarkSwitchActive ? getCurrentColor() : defaultColor;
 setCurrentColor(color);
+import('./assets/css/sass/themes/gogo.light.greenlime.scss');
 
 const render = () => {
   // import(`./assets/css/sass/themes/gogo.${color}.scss`).then(() => {
