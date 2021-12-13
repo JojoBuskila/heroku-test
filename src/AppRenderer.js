@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 // import { Provider } from 'react-redux';
 // import { configureStore } from './redux/store';
 import reportWebVitals from './reportWebVitals';
 
-// const App = React.lazy(() => import(/* webpackChunkName: "App" */ './App'));
-// const App = import('./App');
-import App from './App';
+const App = React.lazy(() => import(/* webpackChunkName: "App" */ './App'));
+
+// import App from './App';
 
 const Main = () => {
-  return <App />;
+  return (
+    <Suspense fallback={<div className="loading" />}>
+      <App />
+    </Suspense>
+  );
 };
 
 ReactDOM.render(<Main />, document.getElementById('root'));
