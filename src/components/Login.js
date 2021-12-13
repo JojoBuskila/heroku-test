@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-require('dotenv').config();
 
 const Login = () => {
   const [email, setEmail] = useState('admin@admin.com');

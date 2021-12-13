@@ -1,5 +1,6 @@
 import './App.css';
 import Login from './components/Login';
+require('dotenv').config();
 
 function App() {
   return (
